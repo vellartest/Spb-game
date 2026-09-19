@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0a0a1e">
+<title>Санкт-Петербург: Путь к успеху</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-container">
+    <canvas id="game"></canvas>
+
+    <!-- Кат-сцена -->
+    <div id="cutscene" class="hidden">
+        <div id="cutscene-bg"></div>
+        <div id="cutscene-content">
+            <div id="cutscene-portrait">🧑</div>
+            <div id="cutscene-text"></div>
+        </div>
+        <button id="cutscene-skip">Пропустить ▶</button>
+        <button id="cutscene-next">Далее ▶</button>
+    </div>
+
+    <!-- Диалог -->
+    <div id="dialogue" class="hidden">
+        <div id="dialogue-name"></div>
+        <div id="dialogue-text"></div>
+        <button id="dialogue-next">▶</button>
+    </div>
+
+    <!-- HUD -->
+    <div id="hud">
+        <div id="stats">
+            <span>💰 <span id="money">0</span>₽</span>
+            <span>⭐ <span id="rep">0</span></span>
+            <span>⚡ <span id="energy">100</span></span>
+        </div>
+        <div id="location">Комната в общежитии</div>
+        <div id="hint"></div>
+    </div>
+
+    <!-- Управление -->
+    <div id="controls">
+        <div id="left-controls">
+            <button class="btn" id="btn-left">◀</button>
+            <button class="btn" id="btn-right">▶</button>
+        </div>
+        <div id="right-controls">
+            <button class="btn interact hidden" id="btn-interact">✋</button>
+            <button class="btn" id="btn-action">💬</button>
+        </div>
+    </div>
+
+    <button id="btn-sound">🔊</button>
+
+    <!-- Старт -->
+    <div id="start-screen">
+        <h1>Санкт-Петербург</h1>
+        <h2>Путь к успеху</h2>
+        <p>История о мечте, крипте и бизнесе</p>
+        <button id="btn-start">▶ НАЧАТЬ</button>
+        <p class="small">Управление: ◀ ▶ — ходьба, ✋ — взаимодействие, 💬 — действие</p>
+    </div>
+
+    <!-- Заголовок главы -->
+    <div id="chapter-screen" class="hidden">
+        <div id="chapter-title"></div>
+        <div id="chapter-subtitle"></div>
+    </div>
+
+    <!-- Финал -->
+    <div id="end-screen" class="hidden">
+        <h1 id="end-title"></h1>
+        <p id="end-text"></p>
+        <button id="btn-restart">🔄 Играть снова</button>
+    </div>
+</div>
+<script src="audio.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
